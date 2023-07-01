@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Box } from '@mui/material';
 import MainComponent from './layout.styled';
-import Sidebar from '../Sidebar';
+import Sidebar from '../components/Sidebar';
 
 const Layout = () => (
   <Box sx={{ display: 'flex' }}>
