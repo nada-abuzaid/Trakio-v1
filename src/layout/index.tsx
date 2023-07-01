@@ -4,7 +4,10 @@ import MainComponent from './layout.styled';
 import Sidebar from '../components/Sidebar';
 
 const Layout = () => (
-  <Box sx={{ display: 'flex' }}>
+  <Box sx={{
+    display: 'flex', backgroundColor: 'custom.background', height: '100vh', width: '100vw',
+  }}
+  >
     <Sidebar />
     <MainComponent component="main">
       <Outlet />

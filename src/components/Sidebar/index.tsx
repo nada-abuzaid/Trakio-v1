@@ -7,41 +7,21 @@ import {
   ListItem,
   ListItemButton,
   ListItemIcon,
-  CardMedia,
   IconButton,
+  Avatar,
 } from '@mui/material';
-import HomeIcon from '@mui/icons-material/Home';
-import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Add } from '@mui/icons-material';
 import { NavLink } from 'react-router-dom';
-import ReactLogo from '/assets/logo.svg';
 import {
   DrawerItem,
   ListItemTextItem,
   ProjectTextItem,
+  StyledAccount,
 } from './sidebar.styled';
 import AddProjectModal from '../AddProject';
-
-const NavList = [
-  {
-    title: 'Home',
-    path: '/',
-    icon: <HomeIcon sx={{ fontSize: 24, color: 'custom.white' }} />,
-  },
-  {
-    title: 'Tasks',
-    path: '/mytask',
-    icon: (
-      <FormatListNumberedIcon sx={{ fontSize: 24, color: 'custom.white' }} />
-    ),
-  },
-  {
-    title: 'Account',
-    path: '/account',
-    icon: <AccountCircleIcon sx={{ fontSize: 24, color: 'custom.white' }} />,
-  },
-];
+import { account } from '../../fake';
+import NAV_LIST from '../../constants/nav';
+import Logo from '../Common/Logo';
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
@@ -50,17 +30,24 @@ const Sidebar = () => {
   return (
     <Box sx={{ display: 'flex' }}>
       <DrawerItem variant="permanent" anchor="left">
-        <Typography>
-          <CardMedia
-            component="img"
-            alt="Trackio"
-            image={ReactLogo}
-            sx={{ marginTop: '1.2rem', width: '50%', marginLeft: '1.2rem' }}
-          />
-        </Typography>
-        <Divider />
+        <Box sx={{ px: 2.5, py: 3, display: 'inline-flex' }}>
+          <Logo />
+        </Box>
+        <Box sx={{ mb: 2, mx: 2.5 }}>
+          <StyledAccount>
+            <Avatar src={account.photoURL} alt="photoURL" />
+            <Box sx={{ ml: 2 }}>
+              <Typography variant="subtitle2" sx={{ color: 'custom.white' }}>
+                {account.displayName}
+              </Typography>
+              <Typography variant="body2" sx={{ color: '#e2e2e2', fontSize: '10px' }}>
+                {account.role.toUpperCase()}
+              </Typography>
+            </Box>
+          </StyledAccount>
+        </Box>
         <List>
-          {NavList.map((nav) => (
+          {NAV_LIST.map((nav) => (
             <NavLink to={nav.path} key={nav.title}>
               <ListItem disablePadding>
                 <ListItemButton>

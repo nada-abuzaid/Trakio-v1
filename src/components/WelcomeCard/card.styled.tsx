@@ -5,7 +5,6 @@ import {
 export const BasicCardBox = styled(Box)(() => ({
   position: 'relative',
   display: 'flex',
-  // width: '45rem',
   background: '#343537',
   justifyContent: 'space-between',
   borderRadius: '1.25rem',
