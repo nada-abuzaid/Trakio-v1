@@ -16,7 +16,6 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Add } from '@mui/icons-material';
 import { NavLink } from 'react-router-dom';
 import ReactLogo from '/assets/logo.svg';
-import PermanentAppBar from '../AppBar';
 import {
   DrawerItem,
   ListItemTextItem,
