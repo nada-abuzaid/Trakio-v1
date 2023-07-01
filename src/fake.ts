@@ -148,8 +148,12 @@ const projects = [
     path: '/project/2',
   },
   {
-    title: 'Team 5',
+    title: 'Project2',
     path: '/project/3',
+  },
+  {
+    title: 'Project3',
+    path: '/project/4',
   },
 ];
 

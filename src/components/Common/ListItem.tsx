@@ -4,6 +4,7 @@ import {
   styled,
   ListItemText,
 } from '@mui/material';
+import { ReactNode } from 'react';
 import { MdDashboard } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 
@@ -28,7 +29,7 @@ export const StyledNavItemIcon = styled(ListItemIcon)({
 });
 
 // eslint-disable-next-line react/require-default-props
-export const NavItem = ({ title, path, icon }: {title: string, path:string, icon?: string}) => (
+export const NavItem = ({ title, path, icon }: {title: string, path:string, icon?: ReactNode}) => (
   <StyledNavItem
     component={NavLink}
     to={path}
