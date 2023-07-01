@@ -6,7 +6,6 @@ import {
   List,
   ListItem,
   ListItemButton,
-  ListItemIcon,
   IconButton,
   Avatar,
 } from '@mui/material';
@@ -22,11 +21,13 @@ import AddProjectModal from '../AddProject';
 import { account } from '../../fake';
 import NAV_LIST from '../../constants/nav';
 import Logo from '../Common/Logo';
+import { NavItem } from '../Common/Nav';
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
   return (
     <Box sx={{ display: 'flex' }}>
       <DrawerItem variant="permanent" anchor="left">
@@ -46,18 +47,14 @@ const Sidebar = () => {
             </Box>
           </StyledAccount>
         </Box>
-        <List>
-          {NAV_LIST.map((nav) => (
-            <NavLink to={nav.path} key={nav.title}>
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemIcon sx={{ minWidth: '42px' }}>
-                    {nav.icon}
-                  </ListItemIcon>
-                  <ListItemTextItem primary={nav.title} />
-                </ListItemButton>
-              </ListItem>
-            </NavLink>
+        <List
+          disablePadding
+          sx={{
+            p: 1, display: 'flex', flexDirection: 'column', gap: '0.8rem',
+          }}
+        >
+          {NAV_LIST.map((item: any) => (
+            <NavItem key={item.title} item={item} />
           ))}
         </List>
         <Divider />
