@@ -19,6 +19,10 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
     indent: ['error', 2],
-    'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
+    'import/no-absolute-path': 'off',
+    'react/function-component-definition': [
+      2,
+      { namedComponents: 'arrow-function' },
+    ],
   },
 };

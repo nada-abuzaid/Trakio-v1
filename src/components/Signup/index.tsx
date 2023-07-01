@@ -4,7 +4,7 @@ import {
   BodyContainer, CustomContainer, CustomTypography1,
   CustomTypography2, FormContent, DontHaveAcount, SigninText,
 } from './signup.styled';
-import ReactLogo from '../../assets/logo.svg';
+import ReactLogo from '/assets/logo.svg';
 import { SignupImage } from './SignupForm/signupForm';
 
 const Sigup = () => (
@@ -33,7 +33,7 @@ const Sigup = () => (
         Sign in
       </SigninText>
     </BodyContainer>
-    <SignupImage src="src/assets/todo.svg" alt="login" />
+    <SignupImage src="/assets/todo.svg" alt="login" />
   </>
 );
 
