@@ -7,7 +7,7 @@ import {
 } from '@mui/material';
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { MdOutlineEdit } from 'react-icons/md';
-import iTask from '../../interfaces';
+import { iTask } from '../../interfaces';
 import Theme from '../../theme';
 
 const TaskRow = ({ task }: iTask) => (

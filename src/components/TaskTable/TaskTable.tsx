@@ -68,14 +68,14 @@ const TaskTable = () => {
   ];
   return (
     <TableContainer component={Box} bgcolor="transparent">
-      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+      <Table sx={{ minWidth: 650 }} size="small" aria-label="tasks table">
         <TableHead>
           <TableRow>
             {COLS.map((col, index) => (
               <TableCell>
                 <Typography
                   variant="subtitle2"
-                  align={index !== 0 ? 'right' : 'left'}
+                  align={index ? 'right' : 'left'}
                   color={Theme.palette.custom.fontGray}
                 >
                   {col}

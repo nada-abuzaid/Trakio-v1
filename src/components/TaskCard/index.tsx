@@ -7,7 +7,7 @@ const TaskCard = ({ task }: iTask) => (
   <Paper
     elevation={0}
     sx={{
-      backgroundColor: '#2E2E30', minWidth: 240, padding: 2, cursor: 'pointer', marginBottom: 1, borderRadius: 3,
+      backgroundColor: 'secondary.main', minWidth: 240, padding: 2, cursor: 'pointer', marginBottom: 1, borderRadius: 3,
     }}
   >
     <Typography variant="subtitle1" sx={{ color: 'white', mb: 3 }}>

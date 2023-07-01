@@ -1,8 +1,9 @@
 import { Grid, Box, Typography } from '@mui/material';
 import { TaskCard } from '../../components';
 import Theme from '../../theme';
-import iTask from '../../interfaces';
+import { iTask } from '../../interfaces';
 import { task } from '../../interfaces/task';
+import { data } from '../../fake';
 
 const TaskBoard = ({ tasks }: iTask) => (
   <Grid container spacing={2}>
@@ -13,7 +14,7 @@ const TaskBoard = ({ tasks }: iTask) => (
           To-Do
         </Typography>
 
-        {tasks?.filter((item: task) => item.section === 'To-Do').map((object: task) => <TaskCard key={object.id} task={object} />)}
+        {data?.filter((item: task) => item.section === 'To-Do').map((object: task) => <TaskCard key={object.id} task={object} />)}
       </Box>
     </Grid>
 
