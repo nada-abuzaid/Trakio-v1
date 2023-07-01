@@ -42,7 +42,7 @@ const router = createBrowserRouter([
         element: <AccountPage />,
       },
       {
-        path: '/myproject',
+        path: '/myprojects',
         element: <ProjectsCard />,
       },
       {

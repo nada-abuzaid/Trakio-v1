@@ -1,6 +1,7 @@
 import HomeIcon from '@mui/icons-material/Home';
 import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { MdDashboard } from 'react-icons/md';
 
 const NAV_LIST = [
   {
@@ -13,6 +14,12 @@ const NAV_LIST = [
     path: '/mytask',
     icon: (
       <FormatListNumberedIcon sx={{ fontSize: 24, color: 'custom.white' }} />
+    ),
+  }, {
+    title: 'Projects',
+    path: '/myprojects',
+    icon: (
+      <MdDashboard style={{ fontSize: 22, color: 'custom.white' }} />
     ),
   },
   {

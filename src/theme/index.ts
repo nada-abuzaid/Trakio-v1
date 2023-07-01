@@ -1,26 +1,28 @@
 import React from 'react';
-import { createTheme } from '@mui/material/styles';
+import { alpha, createTheme } from '@mui/material/styles';
+import { grey } from '@mui/material/colors';
 
-  interface ICustom {
-    background: React.CSSProperties['color'];
-    white: React.CSSProperties['color'];
-    black: React.CSSProperties['color'];
-    purple: React.CSSProperties['color'];
-    gray: React.CSSProperties['color'];
-    green: React.CSSProperties['color'];
-    orange: React.CSSProperties['color'];
-    divider: React.CSSProperties['color'];
-    fontGray: React.CSSProperties['color'];
-    darkFont: React.CSSProperties['color'];
-    editIcon: React.CSSProperties['color'];
-    deleteIcon: React.CSSProperties['color'];
+interface ICustom {
+  background: React.CSSProperties['color'];
+  white: React.CSSProperties['color'];
+  black: React.CSSProperties['color'];
+  purple: React.CSSProperties['color'];
+  gray: React.CSSProperties['color'];
+  green: React.CSSProperties['color'];
+  orange: React.CSSProperties['color'];
+  divider: React.CSSProperties['color'];
+  fontGray: React.CSSProperties['color'];
+  darkFont: React.CSSProperties['color'];
+  editIcon: React.CSSProperties['color'];
+  deleteIcon: React.CSSProperties['color'];
+  selected: React.CSSProperties['color'];
 }
 declare module '@mui/material/styles' {
   interface PaletteOptions {
     custom: Partial<ICustom>;
   }
   interface Palette {
-    custom: ICustom,
+    custom: ICustom;
   }
 }
 
@@ -45,6 +47,7 @@ const THEME = createTheme({
       editIcon: '#3E7BFA',
       deleteIcon: '#FF3333',
       darkFont: '#455A64',
+      selected: alpha(grey[500], 0.12),
     },
   },
 

@@ -138,4 +138,19 @@ const account = {
   role: 'programmer',
 };
 
-export { data, account };
+const projects = [
+  {
+    title: 'project-A',
+    path: '/project/1',
+  },
+  {
+    title: 'Project1',
+    path: '/project/2',
+  },
+  {
+    title: 'Team 5',
+    path: '/project/3',
+  },
+];
+
+export { data, account, projects };

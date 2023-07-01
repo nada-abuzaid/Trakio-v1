@@ -4,6 +4,7 @@ import {
   styled,
   ListItemText,
 } from '@mui/material';
+import { MdDashboard } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 
 export const StyledNavItem:any = styled(
@@ -26,20 +27,25 @@ export const StyledNavItemIcon = styled(ListItemIcon)({
   justifyContent: 'center',
 });
 
-export const NavItem = ({ item: { title, path, icon } }: any) => (
-  <ListItemButton
+// eslint-disable-next-line react/require-default-props
+export const NavItem = ({ title, path, icon }: {title: string, path:string, icon?: string}) => (
+  <StyledNavItem
     component={NavLink}
     to={path}
     sx={{
       '&.active': {
         color: 'custom.white',
-        bgColor: 'custom.selected',
+        backgroundColor: 'custom.selected',
         fontWeight: 'fontWeightBold',
       },
-      '&:hover': { bgColor: 'custom.selected' },
+      '&:hover': { backgroundColor: 'custom.selected' },
     }}
   >
-    <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon>
+    {icon ? <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon> : (
+      <StyledNavItemIcon>
+        <MdDashboard style={{ fontSize: 22, color: 'custom.white' }} />
+      </StyledNavItemIcon>
+    )}
     <ListItemText disableTypography primary={title} />
-  </ListItemButton>
+  </StyledNavItem>
 );
