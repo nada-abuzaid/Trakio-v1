@@ -21,17 +21,6 @@ const ProjectsCard = () => {
   const [openError, setOpenError] = useState(false);
   const [messageError, setMessageError] = useState('');
 
-  // useEffect(() => {
-  //   axios.get(`/api/project/${project_id}}/task`)
-  //     .then((task) => {
-  //       console.log(task);
-  //       setProjectTasks(task.data.data);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }, [userProjects]);
-
   if (isLoading) {
     return <div>Loading...</div>;
   }

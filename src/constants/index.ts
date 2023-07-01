@@ -1,3 +1,4 @@
-const drawerWidth = 260;
+import ENDPOINTS from './endpoints';
+import DRAWER_WIDTH from './global';
 
-export default drawerWidth;
+export { ENDPOINTS, DRAWER_WIDTH };

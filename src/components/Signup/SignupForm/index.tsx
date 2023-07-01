@@ -11,6 +11,7 @@ import {
 } from './signupForm';
 import { signupSchema } from '../../../helper/validation/schema';
 import { ErrorAlert, SuccessAlert } from '../..';
+import { ENDPOINTS } from '../../../constants';
 
 interface SignupFormValues {
   email: string;
@@ -28,7 +29,7 @@ const SignupForm = () => {
 
   const handleSubmit = (values: SignupFormValues) => {
     axios
-      .post('/api/signup', values)
+      .post(ENDPOINTS.SIGNUP, values)
       .then((res) => {
         setOpenSuccess(true);
         setMessageSuccess(res.data.message);

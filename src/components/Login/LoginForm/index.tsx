@@ -16,6 +16,7 @@ import {
 } from './loginForm.styled';
 import { validationSchema } from '../../../helper/validation/schema';
 import { ErrorAlert, SuccessAlert } from '../..';
+import { ENDPOINTS } from '../../../constants';
 
 interface LoginFormValues {
   email: string;
@@ -30,7 +31,7 @@ const LoginForm = () => {
   const navigator = useNavigate();
 
   const handleSubmit = (values: LoginFormValues) => {
-    axios.post('/api/login', values)
+    axios.post(ENDPOINTS.LOGIN, values)
       .then((res) => {
         setOpenSuccess(true);
         setMessageSuccess(res.data.message);

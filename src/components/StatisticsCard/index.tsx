@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import { StatisticsBox, StatisticsContent } from './statistics.styed';
 import { task } from '../../interfaces';
 import { ErrorAlert } from '..';
+import { ENDPOINTS } from '../../constants';
 
 const StatisticsCard = () => {
   const [completedTasks, setCompletedTasks] = useState<task[]>([]);
@@ -12,7 +13,7 @@ const StatisticsCard = () => {
 
   useEffect(() => {
     axios
-      .get('/api/tasks')
+      .get(ENDPOINTS.TASKS)
       .then((response) => {
         const tasks: task[] = response.data.data;
         const filteredTasks = tasks.filter((Task: task) => Task.section === 'Done');
